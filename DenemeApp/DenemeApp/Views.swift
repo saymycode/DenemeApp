@@ -4,6 +4,8 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+import Combine
+import Foundation
 
 struct RootView: View {
     @StateObject private var repository = AppRepository()

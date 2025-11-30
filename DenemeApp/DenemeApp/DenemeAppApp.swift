@@ -11,7 +11,7 @@ import SwiftUI
 struct KesintiRadarApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView();
         }
     }
 }

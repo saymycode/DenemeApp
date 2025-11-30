@@ -4,6 +4,8 @@
 import Foundation
 import SwiftUI
 import UserNotifications
+import Combine
+
 
 protocol OutageDataSource {
     func fetchProviders() async throws -> [Provider]
@@ -94,7 +96,9 @@ actor MockOutageDataSource: OutageDataSource {
                 description: "Planlı vana değişim çalışması yapılacaktır.",
                 status: .planned,
                 startDate: Calendar.current.date(byAdding: .day, value: 1, to: today) ?? today,
-                estimatedEndDate: Calendar.current.date(byAdding: .day, value: 1, to: today).addingTimeInterval(twoHours),
+                estimatedEndDate: Calendar.current
+                    .date(byAdding: .day, value: 1, to: today)?
+                    .addingTimeInterval(twoHours),
                 affectedAreas: ["Şirinyer", "Kaynaklar"],
                 latitude: 38.388,
                 longitude: 27.174,
