@@ -1,14 +1,14 @@
 //
 //  DenemeAppApp.swift
-//  DenemeApp
+//  KesintiRadar
 //
-//  Created by Funda Demirtopuz on 30.11.2025.
+//  Auto-generated overhaul
 //
 
 import SwiftUI
 
 @main
-struct DenemeAppApp: App {
+struct KesintiRadarApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
